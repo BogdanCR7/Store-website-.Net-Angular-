@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aecb12b277c723d805089810695c0950abdbdc2888809e18b38604f52123cd9bf&amp;width=900&amp;height=600&amp;lang=ru_RU&amp;apikey=894c4774-8c8d-46d6-86d5-ae30a8e56c64;scroll=true"></script> -->
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=894c4774-8c8d-46d6-86d5-ae30a8e56c64"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript" charset="utf-8" async src="map.js"></script>
+    <link rel="stylesheet" href="index1.css" />
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        width: 1100px;
+        height: 752px;
+        padding-right: 15px;;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="map"></div>
+      <div class="shops">
+         <div onclick="onclick1()" class="container">
+           <div class="card">
+             <div class="card-wrapper">
+               <div class="card-item">
+                 <figure class="card-image">
+                   <img
+                     src="https://www.adensya.ru/i/guide/1056109/550954.jpg"
+                     alt="..."
+                   />
+                 </figure>
+                 <a class="card-content">
+                   <span class="card-tags">Смотреть на карте</span>
+                   <h2 class="card-title">Улица Малиновского 59</h2>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div onclick="onclick2()" class="container">
+           <div class="card">
+             <div class="card-wrapper">
+               <div class="card-item">
+                 <figure class="card-image">
+                   <img
+                     src="https://www.adensya.ru/i/guide/1056109/550954.jpg"
+                     alt="..."
+                   />
+                 </figure>
+                 <a class="card-content">
+                   <span class="card-tags">Смотреть на карте</span>
+                   <h2 class="card-title">Улица Малиновского 59</h2>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+    </div>
+  </body>
+</html>

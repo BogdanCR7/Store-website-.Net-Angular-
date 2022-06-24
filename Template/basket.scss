@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2); /* Black w/ opacity */
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 380px;
+  right: -380px;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto 0 auto auto;
+  padding: 0 0 120px;
+  border-radius: 0;
+  z-index: 1;
+}
+
+.basketbutton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #ebeef1;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.iconarrow {
+  width: 17px;
+  height: 32px;
+}
+.iconarrow path {
+  width: 100%;
+  height: 100%;
+}
+button {
+  outline: none;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  height: 110px;
+}
+.baskettitle {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  font-family: "Monserat" sans-serif;
+}
+.mybuys {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-family: "Futura", sans-serif;
+  line-height: 100px;
+  font-size: 42px;
+}
+.mybuys:after {
+  content: "";
+  height: 2px;
+  margin-top: 10px;
+  margin-left: 15px;
+  flex: 1 1;
+  background-color: #000;
+}
+.total-cost {
+  border-top: 2px solid #484848;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 0;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.cost_title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #818d92;
+  text-transform: uppercase;
+  font-family: "Monserat" sans-serif;
+}
+.cost_value {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Monserat" sans-serif;
+  text-transform: uppercase;
+}
+.confirm {
+  border-radius: 30px;
+  display: inline-block;
+  background-color: #0d0d0e;
+  color: #fff;
+  padding: 15px 30px;
+  margin: 30px 0;
+  font-family: Futura, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.basketproducts{
+  display:flex;
+  flex-direction: column;
+  padding-bottom: 35px;
+  position: relative;
+}
+.basketcontainer:not(:first-child){
+  margin-top:20px;
+}
+.basketcontainer:not(:last-child){
+  border-bottom: 1px solid #e0e3e6;
+  padding-bottom:20px;
+}
+
+.basketcontainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ 
+  &_image img{
+    width: 130px;
+    height: 130px;
+    border: 1px solid #ccc;
+    border-radius:13px;
+    padding:5px;
+    transition:opacity 0.1s;
+    &:hover{
+      opacity: .75;
+    }
+  }
+  .basketbutton{
+      position: absolute;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      width: 23px;
+      height: 23px;
+      left: -12px;
+      top: -5px;
+      border-radius: 50%;
+      font-size:12px;
+      border: 1px solid #9ca4ab;
+      background: #fff;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover {
+      opacity: 0.75;
+      }
+  }
+}
+.details{
+  margin-left:15px;
+  margin-top: 20px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  span{
+    font-size:15px; 
+    font-family: "Montserrat", sans-serif;
+    font-weight:600;
+  }
+  .explore {
+    border-radius: 30px;
+    
+    background-color: #0d0d0e;
+    color: #fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 10px 0px;
+    margin: 30px 0;
+    
+    font-weight: 700;
+    font-size: 24px;
+  }
+}

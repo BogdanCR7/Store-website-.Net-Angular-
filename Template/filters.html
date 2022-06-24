@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="filters.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="filters">
+      <span class="filtertitle">Фильтры</span>
+      <div class="rangenumbers">
+        <input type="text" value="0" /><span>—</span
+        ><input type="text" value="100" /><input type="button" value="OK" />
+      </div>
+      <div class="middle">
+        <div class="multi-range-slider">
+          <input type="range" id="input-left" min="0" max="100" value="0" />
+          <input type="range" id="input-right" min="0" max="100" value="100" />
+
+          <div class="slider">
+            <div class="track"></div>
+            <div class="range"></div>
+            <div class="thumb left"></div>
+            <div class="thumb right"></div>
+          </div>
+        </div>
+      </div>
+      <div class="checkboxgroup">
+        <span class="titlecheckbox">Color</span>
+        <div class="wrapper">
+          <input type="checkbox" id="check" />
+          <label class="checklabel" for="check">White</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check1" />
+          <label class="checklabel" for="check1">White</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check2" />
+          <label class="checklabel" for="check2">White</label>
+        </div>
+      </div>
+      <span class="titlecheckbox">Цвет</span>
+      <div class="checkboxgroup">
+        <div class="wrapper">
+          <input type="checkbox" id="check" />
+          <label class="checklabel" for="check">Белый</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check1" />
+          <label class="checklabel" for="check1">Черный</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check2" />
+          <label class="checklabel" for="check2">Красный</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check2" />
+          <label class="checklabel" for="check2">Серый</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check2" />
+          <label class="checklabel" for="check2">White</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check2" />
+          <label class="checklabel" for="check2">White</label>
+        </div>
+        <div class="wrapper">
+          <input type="checkbox" id="check2" />
+          <label class="checklabel" for="check2">White</label>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+   var inputLeft = document.getElementById("input-left");
+var inputRight = document.getElementById("input-right");
+
+var thumbLeft = document.querySelector(".slider > .thumb.left");
+var thumbRight = document.querySelector(".slider > .thumb.right");
+var range = document.querySelector(".slider > .range");
+
+function setLeftValue() {
+	var _this = inputLeft,
+		min = parseInt(_this.min),
+		max = parseInt(_this.max);
+
+	_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+	var percent = ((_this.value - min) / (max - min)) * 100;
+
+	thumbLeft.style.left = percent + "%";
+	range.style.left = percent + "%";
+}
+setLeftValue();
+
+function setRightValue() {
+	var _this = inputRight,
+		min = parseInt(_this.min),
+		max = parseInt(_this.max);
+
+	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+	var percent = ((_this.value - min) / (max - min)) * 100;
+
+	thumbRight.style.right = (100 - percent)- + "%";
+	range.style.right = (100 - percent) + "%";
+}
+setRightValue();
+
+inputLeft.addEventListener("input", setLeftValue);
+inputRight.addEventListener("input", setRightValue);
+
+inputLeft.addEventListener("mouseover", function() {
+	thumbLeft.classList.add("hover");
+});
+inputLeft.addEventListener("mouseout", function() {
+	thumbLeft.classList.remove("hover");
+});
+
+
+inputRight.addEventListener("mouseover", function() {
+	thumbRight.classList.add("hover");
+});
+inputRight.addEventListener("mouseout", function() {
+	thumbRight.classList.remove("hover");
+});
+
+  </script>
+</html>

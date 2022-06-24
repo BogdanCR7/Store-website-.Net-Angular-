@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="basket.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div id="mySidenav" class="sidenav">
+        <button class="basketbutton" onclick="closeNav()">
+          <svg class="iconarrow" viewBox xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M2.2 16L16.7 1.5c.4-.4.4-.9 0-1.3s-.9-.4-1.3 0L.3 15.4c-.4.4-.4.9 0 1.3l15.2 15.1c.2.2.4.3.6.3.2 0 .5-.1.6-.3.4-.4.4-.9 0-1.3L2.2 16z"
+            />
+          </svg>
+          <span class="baskettitle">Продолжить покупки</span>
+        </button>
+
+        <div class="mybuys">Мои покупки</div>
+        <div class="basketproducts">
+          <div class="basketcontainer">
+            <div class="basketcontainer_image"><img src="card2.jpg" /></div>
+            <div class="details">
+              <span>Мулитиварка LG 700</span
+              ><span class="explore">1000 RUB</span>
+            </div>
+            <div class="basketbutton">&#10005;</div>
+          </div>
+          <div class="basketcontainer">
+            <div class="basketcontainer_image"><img src="card2.jpg" /></div>
+            <div class="details">
+              <span>Мулитиварка LG 700</span
+              ><span class="explore">1000 RUB</span>
+            </div>
+            <div class="basketbutton">&#10005;</div>
+          </div>
+        </div>
+
+        <div class="total-cost">
+          <span class="cost_title">СТОИМОСТЬ ТОВАРОВ:</span
+          ><span class="cost_value">3050&nbsp;Rub</span>
+        </div>
+
+        <a class="confirm">Оформить заказ &#8594;</a>
+      </div>
+    </div>
+
+    <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+      >&#9776; open</span
+    >
+
+    <script>
+      var modal = document.getElementById("myModal");
+      function openNav() {
+        modal.style.display = "block";
+        setTimeout(function () {
+          document.getElementById("mySidenav").style.right = "0px";
+        }, 1);
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.right = "-380px";
+        setTimeout(function () {
+          modal.style.display = "none";
+        }, 500);
+      }
+    </script>
+  </body>
+</html>
