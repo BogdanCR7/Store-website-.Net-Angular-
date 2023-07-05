@@ -21,7 +21,7 @@
     "@auth0/angular-jwt": "^5.0.2",
     "angular-jwt": "github:auth0/angular-jwt",
     "rxjs": "~7.4.0",
-    "tslib": "^2.3.0",
+    "tslib": "^2.5.3",
     "ymaps": "^0.2.1",
     "zone.js": "~0.11.4"
   },
